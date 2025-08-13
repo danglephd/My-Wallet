@@ -1,8 +1,4 @@
-Dưới đây là bản **README.md** cho dự án **My Wallet** theo yêu cầu của bạn, mình viết rõ ràng và chuyên nghiệp để có thể dùng trực tiếp trên GitHub:
 
----
-
-````markdown
 # 💰 My Wallet
 
 **My Wallet** là một ứng dụng web quản lý chi tiêu cá nhân đơn giản, chạy trên **Firebase Hosting** và sử dụng **Google Sheets** làm cơ sở dữ liệu No-Code thông qua Google Apps Script API.  
