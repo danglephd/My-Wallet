@@ -1,0 +1,24 @@
+name: Deploy to Firebase Hosting on push
+
+on:
+  push:
+    branches:
+      - main   # Deploy khi branch main được cập nhật
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Lấy code từ repo
+      - uses: actions/checkout@v3
+
+      # Cài Node.js (Firebase CLI cần Node)
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Cài Firebase CLI
+      - run: npm install -g firebase-tools
+
+      # Deploy lên Firebase Hosting
+      - run: firebase deploy --only hosting --token "${{ secrets.FIREBASE_TOKEN }}"
